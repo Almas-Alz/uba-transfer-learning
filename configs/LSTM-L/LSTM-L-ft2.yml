@@ -1,0 +1,27 @@
+# --- Experiment configurations --------------------------------------------------------------------
+
+# experiment name, used as folder name
+experiment_name: LSTM-L-ft2
+
+# files to specify training, validation and test basins (relative to code root or absolute path)
+train_basin_file: basin_lists/Uba_basin.txt
+test_basin_file: basin_lists/Uba_basin.txt
+
+train_start_date: "01/01/2010"
+train_end_date: "31/12/2011"
+test_start_date: "01/01/2012"
+test_end_date: "30/11/2020"
+
+
+# --- Training configuration -----------------------------------------------------------------------
+
+# specify learning rates to use starting at specific epochs (0 is the initial learning rate)
+learning_rate: 5e-5	
+
+# Number of training epochs
+epochs: 20
+
+finetune_modules:
+- head
+
+base_run_dir: configs/LSTM-L/LSTM-L-pretrain
